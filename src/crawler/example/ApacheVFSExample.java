@@ -20,16 +20,11 @@ public class ApacheVFSExample {
 
 	public static void main(String[] args) {
 		
-		// 遠端資料路徑
-		/*String uri = "tar:gz:http://crawler:12345678@128.199.204.20:8080"
+		// 遠端資料路徑 // 練習過了
+		String uri = "tar:gz:http://crawler:12345678@128.199.204.20:8080"
 				+ "/httpLogin/download.tar.gz"
 				+ "!download.tar"
-				+ "!/path/data"; */
-
-		String uri = "tar:gz:http://crawler:12345678@128.199.204.20:8080"
-		           + "/httpLogin/download.tar.gz"
-                   + "!download.tar"
-				   + "!/path/data";
+				+ "!/path/data";
 
 
 		System.out.println(
