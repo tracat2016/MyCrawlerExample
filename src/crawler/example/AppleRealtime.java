@@ -34,7 +34,7 @@ public class AppleRealtime {
 //		data sample
 //		----
 //		<li class="rtddt polit">
-//			<a href="/realtimenews/article/politics/20160703/899807/【更新】最新民調　74.6認同飛彈誤射是國軍螺絲鬆" target="_blank">
+//			<a href="/realtimenews/article/politics/20160703/899807/【更新】XXXXtarget="_blank">
 //			<time>13:11</time>
 //			<h2>政治</h2>
 //			<h1><font color="#ff0000">【更新】最新民調　74.6%認同飛彈誤射...(4580)</font></h1>
@@ -59,7 +59,7 @@ public class AppleRealtime {
 //	                <h1><font color="#ff0000"> 【更新】好兆頭！　陽岱鋼單場第2安出爐(7234)</font></h1>
 //	            </a>
 //            </li>		
-
+// 我是註解***********************
 			// 如果不想要更新的資料
 			if ( news.select("h1 > font:matchesOwn(【更新】)").size() > 0 ) continue; 
 			
