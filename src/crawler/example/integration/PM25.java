@@ -22,7 +22,7 @@ public class PM25 {
     public static void main(String[] args) {
 
         // 遠端資料路徑
-        String uri = "http://opendata2.epa.gov.tw/AQX.xml";
+        String uri = "http://opendata2.epa.gov.tw/AQX.xml"; //PM2.5 的遠端資料來源
 //        data sample
 //        ---
 //        <AQX>
@@ -64,7 +64,7 @@ public class PM25 {
             Long    pm10    = Longs.tryParse( elem.getElementsByTag("PM10").text() );
             Long    pm25    = Longs.tryParse( elem.getElementsByTag("PM2.5").text() );
             Long    psi     = Longs.tryParse( elem.getElementsByTag("PSI").text() );
-            String  publishtime
+            String  publishtime //實施偵測時間
                     = elem.getElementsByTag("PublishTime").text()
                     .replace(' ', 'T') + ":00+0800";
             String  sitename= elem.getElementsByTag("SiteName").text();
