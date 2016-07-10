@@ -1,6 +1,8 @@
 package crawler.example;
 
 import com.github.abola.crawler.CrawlerPack;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 
 
 /**
@@ -14,15 +16,26 @@ import com.github.abola.crawler.CrawlerPack;
 public class PttHomework {
 	
 	public static void main(String[] args) {
-		String uri = "https://www.ptt.cc/bbs/Gossiping/M.1458547807.A.32A.html";
-		
+		String uri = "https://www.ptt.cc/bbs/translator/M.1108654871.A.004.html";
 
-		System.out.println( 
+		Document jsoup = CrawlerPack.start()
+				.addCookie("over18", "1")
+				.getFromHtml(uri);
+
+				System.out.println(jsoup.select("div.push"));
+
+		for (Element elem:jsoup.select("div.push")){
+
+			System.out.println(elem.select(".push.tag").text());
+		}
+
+//用 cookie 表示已滿18歲
+		/*System.out.println(
 			CrawlerPack.start()
 			    .addCookie("over18", "1")
 				.getFromHtml(uri)
-				.select(".push-tag:matchesOwn(推) + .push-userid")
+				.select(".push-tag:matches(推)+span")
 				.toString()
-		);
+		);*/
 	}
 }
