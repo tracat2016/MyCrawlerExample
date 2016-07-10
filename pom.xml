@@ -30,8 +30,8 @@
                 <id>yahooStock</id>
               </program>
               <program>
-                  <mainClass>crawler.example.integration.PM25ElasticImport</mainClass>
-                  <id>pm25ElasticImport</id>
+                  <mainClass>crawler.example.integration.PM25</mainClass>
+                  <id>pm25ElasticImport.bat</id>
               </program>
             </programs>
           </configuration>
